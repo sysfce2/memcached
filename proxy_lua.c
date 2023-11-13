@@ -1388,6 +1388,7 @@ int proxy_register_libs(void *ctx, LIBEVENT_THREAD *t, void *state) {
         {"queue_assign", mcplib_rcontext_queue_assign},
         {"queue", mcplib_rcontext_queue},
         {"wait_for", mcplib_rcontext_wait_for},
+        {"queue_and_wait", mcplib_rcontext_queue_and_wait},
         {"wait_handle", mcplib_rcontext_wait_handle},
         {"good", mcplib_rcontext_good},
         {"ok", mcplib_rcontext_ok},
