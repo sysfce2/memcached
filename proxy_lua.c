@@ -1389,7 +1389,7 @@ int proxy_register_libs(void *ctx, LIBEVENT_THREAD *t, void *state) {
     };
 
     const struct luaL_Reg mcplib_rcontext_m[] = {
-        {"queue_assign", mcplib_rcontext_queue_assign},
+        {"queue_set_cb", mcplib_rcontext_queue_set_cb},
         {"queue", mcplib_rcontext_queue},
         {"wait_for", mcplib_rcontext_wait_for},
         {"queue_and_wait", mcplib_rcontext_queue_and_wait},
@@ -1402,6 +1402,8 @@ int proxy_register_libs(void *ctx, LIBEVENT_THREAD *t, void *state) {
 
     const struct luaL_Reg mcplib_funcgen_m[] = {
         {"__gc", mcplib_funcgen_gc},
+        {"queue_assign", mcplib_funcgen_queue_assign},
+        {"ready", mcplib_funcgen_ready},
         {NULL, NULL}
     };
 
